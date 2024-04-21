@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="wrapper">
+        <div className="content">
+          <header className="main-header">
+            <div className="layers">
+              <div className="layer__header">
+                <div className="layers__caption">Welcome to Parallax</div>
+                <div className="layers__title">Fairy Forest</div>
+              </div>
+              <div className="layer layers__base"></div>
+              <div className="layer layers__middle"></div>
+              <div className="layer layers__front"></div>
+            </div>
+          </header>
+
+          <article className="main-article">
+            <div className="main-article__content">
+              <h2 className="main-article__header">To be continued</h2>
+              <p className="main-article__paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
+                error provident dignissimos facere. Repellendus tempore autem
+                qui! Quia magnam tempora esse id necessitatibus corrupti
+                mollitia expedita sapiente cum rerum, ut dicta laboriosam!
+              </p>
+            </div>
+            <div className="copy">© WebDesign Master</div>
+          </article>
+        </div>
+      </div>
     </div>
   );
 }
