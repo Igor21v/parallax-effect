@@ -1,7 +1,27 @@
-import React from "react";
+import { useLayoutEffect } from "react";
 import "./App.css";
 
+//@ts-ignore
+import { gsap } from "./assets/libs/gsap/gsap.min.js";
+//@ts-ignore
+import { ScrollSmoother } from "./assets/libs/gsap/ScrollSmoother.min.js";
+//@ts-ignore
+import { ScrollTrigger } from "./assets/libs/gsap/ScrollTrigger.min.js";
+
 function App() {
+  window.addEventListener("scroll", (e) => {
+    document.documentElement.style.setProperty(
+      "--scrollTop",
+      `${window.scrollY}px`
+    );
+  });
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    ScrollSmoother.create({
+      wrapper: ".wrapper",
+      content: ".content",
+    });
+  });
   return (
     <div className="App">
       <div className="wrapper">
