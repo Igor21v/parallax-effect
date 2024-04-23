@@ -1,12 +1,9 @@
 import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+// @ts-ignore
+import ScrollSmoother from "../assets/libs/gsap/ScrollSmoother.min.js";
 import "./App.css";
-
-//@ts-ignore
-import { gsap } from "./assets/libs/gsap/gsap.min.js";
-//@ts-ignore
-import { ScrollSmoother } from "./assets/libs/gsap/ScrollSmoother.min.js";
-//@ts-ignore
-import { ScrollTrigger } from "./assets/libs/gsap/ScrollTrigger.min.js";
 
 function App() {
   window.addEventListener("scroll", (e) => {
@@ -48,7 +45,7 @@ function App() {
                 mollitia expedita sapiente cum rerum, ut dicta laboriosam!
               </p>
             </div>
-            <div className="copy">© WebDesign Master</div>
+            <div className="copy">Igor Bondarenko</div>
           </article>
         </div>
       </div>

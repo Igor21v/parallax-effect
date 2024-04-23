@@ -10,7 +10,7 @@
     "@types/node": "^16.18.96",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
-    "gsap-trial": "^3.12.5",
+    "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -42,6 +42,8 @@
     ]
   },
   "devDependencies": {
-    "@types/gsap": "^3.0.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/gsap": "^3.0.0",
+    "typescript-plugin-css-modules": "^5.1.0"
   }
 }

@@ -7,7 +7,7 @@
   z-index: 100;
   width: 100%;
   height: calc(var(--index) * 10);
-  background-image: url(./assets/img/ground.png);
+  background-image: url(./img/ground.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,15 +35,15 @@
 .layers__base {
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: 0;
-  background-image: url(./assets/img/layer-base.png);
+  background-image: url(./img/layer-base.png);
 }
 .layers__middle {
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-  background-image: url(./assets/img/layer-middle.png);
+  background-image: url(./img/layer-middle.png);
 }
 .layers__front {
   transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
-  background-image: url(./assets/img/layer-front.png);
+  background-image: url(./img/layer-front.png);
 }
 .layer__header {
   z-index: 1;
@@ -78,7 +78,7 @@
   /* Update: */
   top: -1px;
   z-index: 10;
-  background-image: url(./assets/img/dungeon.jpg);
+  background-image: url(./img/dungeon.jpg);
 }
 .main-article__header {
   text-transform: uppercase;
