@@ -1,5 +1,9 @@
 import { memo, useLayoutEffect } from "react";
 import cls from "./Vertical.module.scss";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+// @ts-ignore
+import ScrollSmoother from "../../shared/lib/gsap/ScrollSmoother.min.js";
 
 interface verticalProps {}
 
