@@ -3,7 +3,7 @@ import cls from "./Vertical.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 // @ts-ignore
-import ScrollSmoother from "../../shared/lib/gsap/ScrollSmoother.min.js";
+import ScrollSmoother from "shared/lib/gsap/ScrollSmoother.min.js";
 
 interface verticalProps {}
 
@@ -17,8 +17,8 @@ export const Vertical = memo((props: verticalProps) => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     ScrollSmoother.create({
-      wrapper: ".wrapper",
-      content: ".content",
+      wrapper: `.${cls.wrapper}`,
+      content: `.${cls.content}`,
     });
   });
   return (

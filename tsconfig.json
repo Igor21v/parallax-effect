@@ -20,11 +20,7 @@
         "name": "typescript-plugin-css-modules"
       }
     ],
-    // Для абсолютного импорта
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "src"
   },
   "include": ["src"]
 }

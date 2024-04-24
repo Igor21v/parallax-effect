@@ -1,4 +1,4 @@
-import { Vertical } from "../pages/Vertical/Vertical";
+import { Vertical } from "pages/Vertical";
 
 function App() {
   return <Vertical />;
