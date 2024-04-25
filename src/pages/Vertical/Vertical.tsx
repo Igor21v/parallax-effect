@@ -2,22 +2,20 @@ import { memo, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import cls from './Vertical.module.scss';
 import { ScrollTrigger } from 'gsap/all';
-// @ts-ignore
+// @ts-expect-error //export library as file
 import ScrollSmoother from 'shared/lib/gsap/ScrollSmoother.min.js';
 
-interface verticalProps {}
-
-export const Vertical = memo((props: verticalProps) => {
+export const Vertical = memo(() => {
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         ScrollSmoother.create({
-            wrapper: `.${cls.wrapper}`,
+            wrapper: `.${'wrapper'}`,
             content: `.${cls.content}`,
         });
     });
 
     return (
-        <div className={cls.wrapper}>
+        <div className={'wrapper'}>
             <div className={cls.content}>
                 <header className={cls.main_header}>
                     <div className={cls.layers}>
@@ -40,7 +38,7 @@ export const Vertical = memo((props: verticalProps) => {
                 </header>
 
                 <article className={cls.main_article}>
-                    <div className={cls.main_article__content}>
+                    <div>
                         <h2 className={cls.main_article__header}>
                             To be continued
                         </h2>

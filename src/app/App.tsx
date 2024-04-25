@@ -1,5 +1,5 @@
 import { Vertical } from 'pages/Vertical';
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
     document.documentElement.style.setProperty(
         '--scrollTop',
         `${window.scrollY}px`,
