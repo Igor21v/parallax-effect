@@ -9,10 +9,11 @@ export const Vertical = memo(() => {
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         ScrollSmoother.create({
-            wrapper: `.${'wrapper'}`,
+            wrapper: cls.wrapper,
             content: `.${cls.content}`,
         });
     });
+
     const wrapper = useRef<HTMLDivElement>(null);
     window.addEventListener('scroll', () => {
         if (wrapper.current) {
@@ -24,7 +25,7 @@ export const Vertical = memo(() => {
     });
 
     return (
-        <div className={'wrapper'} ref={wrapper}>
+        <div className={cls.wrapper} ref={wrapper}>
             <div className={cls.content}>
                 <header className={cls.main_header}>
                     <div className={cls.layers}>
