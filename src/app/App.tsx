@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <Vertical />,
     },
     {
-        path: 'horizontal',
+        path: 'hor',
         element: <Horizontal />,
     },
 ]);
