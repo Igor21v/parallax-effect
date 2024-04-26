@@ -28,12 +28,8 @@ export const Vertical = memo(() => {
                             </div>
                         </div>
                         <div className={`${cls.layer} ${cls.layers__base}`} />
-                        <div
-                            className={`${cls.layer} ${cls.layers__middle}`}
-                        ></div>
-                        <div
-                            className={`${cls.layer} ${cls.layers__front}`}
-                        ></div>
+                        <div className={`${cls.layer} ${cls.layers__middle}`} />
+                        <div className={`${cls.layer} ${cls.layers__front}`} />
                     </div>
                 </header>
 
