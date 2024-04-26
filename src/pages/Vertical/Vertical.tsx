@@ -1,4 +1,4 @@
-import { memo, useLayoutEffect } from 'react';
+import { memo, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import cls from './Vertical.module.scss';
 import { ScrollTrigger } from 'gsap/all';
@@ -13,9 +13,18 @@ export const Vertical = memo(() => {
             content: `.${cls.content}`,
         });
     });
+    const wrapper = useRef<HTMLDivElement>(null);
+    window.addEventListener('scroll', () => {
+        if (wrapper.current) {
+            wrapper.current.style.setProperty(
+                '--scrollTop',
+                `${window.scrollY}px`,
+            );
+        }
+    });
 
     return (
-        <div className={'wrapper'}>
+        <div className={'wrapper'} ref={wrapper}>
             <div className={cls.content}>
                 <header className={cls.main_header}>
                     <div className={cls.layers}>
