@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Button } from 'shared/lib/ui/Button';
 import cls from './Main.module.scss';
 document.addEventListener('mousemove', (e) => {
     Object.assign(document.documentElement, {
@@ -13,10 +12,6 @@ document.addEventListener('mousemove', (e) => {
 export const Main = () => {
     return (
         <>
-            <h1>Главная</h1>{' '}
-            <Link to="/vert">
-                <Button>Show vertical parallax</Button>
-            </Link>
             <div className={cls.logo}></div>
             <section className={cls.layers}>
                 <div className={cls.layers__container}>
@@ -31,9 +26,11 @@ export const Main = () => {
                                 Creating a beautiful 3D website with a ‘lens
                                 effect’
                             </div>
-                            <button className={cls.button_start}>
-                                Start Learning
-                            </button>
+                            <Link to="/vert">
+                                <button className={cls.button_start}>
+                                    Start Learning
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className={`${cls.layers__item} ${cls.layer_4}`}>
