@@ -1,9 +1,11 @@
-import { memo, useLayoutEffect, useRef } from 'react';
+import { memo, useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import cls from './Vertical.module.scss';
 import { ScrollTrigger } from 'gsap/all';
 // @ts-expect-error //export library as file
 import ScrollSmoother from 'shared/lib/gsap/ScrollSmoother.min.js';
+import { Link } from 'react-router-dom';
+import { Button } from 'shared/lib/ui/Button';
 
 export const Vertical = memo(() => {
     useLayoutEffect(() => {
@@ -12,6 +14,12 @@ export const Vertical = memo(() => {
             wrapper: cls.wrapper,
             content: `.${cls.content}`,
         });
+    });
+
+    useEffect(() => {
+        return () => {
+            window.scrollTo(0, 0);
+        };
     });
 
     const wrapper = useRef<HTMLDivElement>(null);
@@ -55,6 +63,9 @@ export const Vertical = memo(() => {
                             esse id necessitatibus corrupti mollitia expedita
                             sapiente cum rerum, ut dicta laboriosam!
                         </p>
+                        <Link to="/hor">
+                            <Button>Show horizontal parallax</Button>
+                        </Link>
                     </div>
                     <div className={cls.copy}>Igor Bondarenko</div>
                 </article>
