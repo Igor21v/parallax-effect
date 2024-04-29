@@ -18,7 +18,7 @@ export const Vertical = memo(() => {
 
     useEffect(() => {
         return () => {
-            window.scrollTo(0, 0);
+            document.body.style.removeProperty('height');
         };
     });
 
@@ -33,42 +33,51 @@ export const Vertical = memo(() => {
     });
 
     return (
-        <div className={cls.wrapper} ref={wrapper}>
-            <div className={cls.content}>
-                <header className={cls.main_header}>
-                    <div className={cls.layers}>
-                        <div className={cls.layer__header}>
-                            <div className={cls.layers__caption}>
-                                Welcome to Parallax
+        <div className={cls.wr}>
+            <div className={cls.wrapper} ref={wrapper}>
+                <div className={cls.content}>
+                    <header className={cls.main_header}>
+                        <div className={cls.layers}>
+                            <div className={cls.layer__header}>
+                                <div className={cls.layers__caption}>
+                                    Welcome to Parallax
+                                </div>
+                                <div className={cls.layers__title}>
+                                    Fairy Forest
+                                </div>
                             </div>
-                            <div className={cls.layers__title}>
-                                Fairy Forest
-                            </div>
+                            <div
+                                className={`${cls.layer} ${cls.layers__base}`}
+                            />
+                            <div
+                                className={`${cls.layer} ${cls.layers__middle}`}
+                            />
+                            <div
+                                className={`${cls.layer} ${cls.layers__front}`}
+                            />
                         </div>
-                        <div className={`${cls.layer} ${cls.layers__base}`} />
-                        <div className={`${cls.layer} ${cls.layers__middle}`} />
-                        <div className={`${cls.layer} ${cls.layers__front}`} />
-                    </div>
-                </header>
+                    </header>
 
-                <article className={cls.main_article}>
-                    <div>
-                        <h2 className={cls.main_article__header}>
-                            To be continued
-                        </h2>
-                        <p className={cls.main_article__paragraph}>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Omnis error provident dignissimos facere.
-                            Repellendus tempore autem qui! Quia magnam tempora
-                            esse id necessitatibus corrupti mollitia expedita
-                            sapiente cum rerum, ut dicta laboriosam!
-                        </p>
-                        <Link to="/hor">
-                            <Button>Show horizontal parallax</Button>
-                        </Link>
-                    </div>
-                    <div className={cls.copy}>Igor Bondarenko</div>
-                </article>
+                    <article className={cls.main_article}>
+                        <div>
+                            <h2 className={cls.main_article__header}>
+                                To be continued
+                            </h2>
+                            <p className={cls.main_article__paragraph}>
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Omnis error provident
+                                dignissimos facere. Repellendus tempore autem
+                                qui! Quia magnam tempora esse id necessitatibus
+                                corrupti mollitia expedita sapiente cum rerum,
+                                ut dicta laboriosam!
+                            </p>
+                            <Link to="/hor">
+                                <Button>Show horizontal parallax</Button>
+                            </Link>
+                        </div>
+                        <div className={cls.copy}>Igor Bondarenko</div>
+                    </article>
+                </div>
             </div>
         </div>
     );

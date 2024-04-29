@@ -15,17 +15,16 @@ export const Main = () => {
 
     const canvas = useRef<HTMLCanvasElement>(null);
     useEffect(() => {
-        console.log('canvas ' + canvas);
         rain(canvas.current);
     }, []);
 
     return (
         <>
-            <div className={cls.logo}></div>
+            <div className={cls.logo} />
             <section className={cls.layers}>
                 <div className={cls.layers__container}>
-                    <div className={`${cls.layers__item} ${cls.layer_1}`}></div>
-                    <div className={`${cls.layers__item} ${cls.layer_2}`}></div>
+                    <div className={`${cls.layers__item} ${cls.layer_1}`} />
+                    <div className={`${cls.layers__item} ${cls.layer_2}`} />
                     <div className={`${cls.layers__item} ${cls.layer_3}`}>
                         <div className={cls.hero_content}>
                             <h1>
@@ -43,10 +42,10 @@ export const Main = () => {
                         </div>
                     </div>
                     <div className={`${cls.layers__item} ${cls.layer_4}`}>
-                        <canvas ref={canvas}></canvas>
+                        <canvas ref={canvas} />
                     </div>
-                    <div className={`${cls.layers__item} ${cls.layer_5}`}></div>
-                    <div className={`${cls.layers__item} ${cls.layer_6}`}></div>
+                    <div className={`${cls.layers__item} ${cls.layer_5}`} />
+                    <div className={`${cls.layers__item} ${cls.layer_6}`} />
                 </div>
             </section>
         </>
