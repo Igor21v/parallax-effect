@@ -1,15 +1,24 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import cls from './Main.module.scss';
-document.addEventListener('mousemove', (e) => {
-    Object.assign(document.documentElement, {
-        style: `
+import { rain } from 'shared/ui/Rain/rain.js';
+
+export const Main = () => {
+    document.addEventListener('mousemove', (e) => {
+        Object.assign(document.documentElement, {
+            style: `
 		--move-x: ${(e.clientX - window.innerWidth / 2) * -0.005}deg;
 		--move-y: ${(e.clientY - window.innerHeight / 2) * 0.01}deg;
 		`,
+        });
     });
-});
 
-export const Main = () => {
+    const canvas = useRef<HTMLCanvasElement>(null);
+    useEffect(() => {
+        console.log('canvas ' + canvas);
+        rain(canvas.current);
+    }, []);
+
     return (
         <>
             <div className={cls.logo}></div>
@@ -34,7 +43,7 @@ export const Main = () => {
                         </div>
                     </div>
                     <div className={`${cls.layers__item} ${cls.layer_4}`}>
-                        <canvas className="rain"></canvas>
+                        <canvas ref={canvas}></canvas>
                     </div>
                     <div className={`${cls.layers__item} ${cls.layer_5}`}></div>
                     <div className={`${cls.layers__item} ${cls.layer_6}`}></div>

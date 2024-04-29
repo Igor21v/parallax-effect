@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Button } from 'shared/lib/ui/Button';
+import { Button } from 'shared/ui/Button';
 
 export const Horizontal = () => {
     return (

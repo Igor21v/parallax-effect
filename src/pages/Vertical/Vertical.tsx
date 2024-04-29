@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/all';
 // @ts-expect-error //export library as file
 import ScrollSmoother from 'shared/lib/gsap/ScrollSmoother.min.js';
 import { Link } from 'react-router-dom';
-import { Button } from 'shared/lib/ui/Button';
+import { Button } from 'shared/ui/Button';
 
 export const Vertical = memo(() => {
     useLayoutEffect(() => {
