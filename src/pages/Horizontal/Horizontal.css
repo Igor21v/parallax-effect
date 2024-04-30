@@ -12,6 +12,7 @@
     --swiper-pagination-color: #afb3c0;
     --swiper-pagination-bullet-inactive-color: #36373c;
     --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-navigation-color: #afb3c0;
 }
 body {
     background-color: #000;
@@ -72,8 +73,6 @@ button {
 .slider-navigation > * {
     border: 1.5px solid var(--swiper-theme-color);
     border-radius: 10em;
-    width: 55px;
-    height: 55px;
 }
 .video-background {
     position: fixed;

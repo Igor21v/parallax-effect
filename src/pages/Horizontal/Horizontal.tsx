@@ -6,7 +6,11 @@ import logoSrc from 'pages/Horizontal/img/logo.svg';
 import videoSrc from 'pages/Horizontal/media/background.mp4';
 import './Horizontal.css';
 import Swiper from 'swiper';
+import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/mousewheel';
 
 /* import { Swiper } from 'shared/lib/swiper/swiper-bundle.min.js'; */
 
@@ -14,7 +18,7 @@ export const Horizontal = () => {
     const video = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        const swiperText = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper', {
             speed: 1600,
             mousewheel: {},
             pagination: {
@@ -25,9 +29,12 @@ export const Horizontal = () => {
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next',
             },
+            modules: [Navigation, Pagination, Mousewheel],
         });
 
-        swiperText.on('slideChange', function () {
+        console.log('sw ' + swiper.mousewheel.enabled);
+
+        swiper.on('slideChange', function () {
             if (video.current) {
                 gsap.to(video.current, 1.6, {
                     currentTime:
@@ -39,7 +46,7 @@ export const Horizontal = () => {
                 });
             }
         });
-        swiperText
+        swiper
             .on('slideChangeTransitionStart', function () {
                 video.current?.classList.add('change');
             })
