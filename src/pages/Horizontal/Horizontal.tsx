@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import cls from './Horizontal.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Horizontal = () => {
     const video = useRef<HTMLVideoElement>(null);
@@ -88,7 +89,9 @@ export const Horizontal = () => {
                         <div className={cls.slide__content}>
                             <h2>Abstract</h2>
                             <p>Designing for the future</p>
-                            <button>Join Us</button>
+                            <Link to="/">
+                                <button>Join Us</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={`swiper-slide ${cls.slide}`}>
