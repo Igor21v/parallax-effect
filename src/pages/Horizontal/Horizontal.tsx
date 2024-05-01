@@ -55,7 +55,7 @@ export const Horizontal = () => {
     }, []);
 
     return (
-        <>
+        <div className={cls.wrapper}>
             <div className={cls['top-line']}>
                 <div className={`${cls.container} ${cls['container-top']}`}>
                     <div>
@@ -131,6 +131,6 @@ export const Horizontal = () => {
                 muted
                 ref={video}
             ></video>
-        </>
+        </div>
     );
 };
