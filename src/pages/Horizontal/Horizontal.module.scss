@@ -32,7 +32,7 @@ body {
     opacity: 0;
     transition: opacity 0.25s ease;
 }
-.swiper-slide-active .slide__content {
+:global(.swiper-slide-active) .slide__content {
     opacity: 1;
 }
 .slide__content h2 {
@@ -88,7 +88,7 @@ button {
     opacity: 0.7;
     transition: opacity 2s ease-out;
 }
-.video-background.change {
+.video-background:global(.change) {
     opacity: 1;
 }
 

@@ -3,13 +3,13 @@ import gsap from 'gsap';
 import logoSrc from 'pages/Horizontal/img/logo.svg';
 // @ts-expect-error TODO
 import videoSrc from 'pages/Horizontal/media/background.mp4';
-import './Horizontal.scss';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
+import cls from './Horizontal.module.scss';
 
 export const Horizontal = () => {
     const video = useRef<HTMLVideoElement>(null);
@@ -56,15 +56,15 @@ export const Horizontal = () => {
 
     return (
         <>
-            <div className="top-line">
-                <div className="container container-top">
+            <div className={cls['top-line']}>
+                <div className={`${cls.container} ${cls['container-top']}`}>
                     <div>
-                        <div className="logo">
+                        <div className={cls.logo}>
                             <img src={logoSrc} alt="Alt" />
                         </div>
                     </div>
                     <div>
-                        <ul className="main-mnu">
+                        <ul className={cls['main-mnu']}>
                             <li>
                                 <a href="#">About</a>
                             </li>
@@ -82,31 +82,31 @@ export const Horizontal = () => {
                 </div>
             </div>
 
-            <div className="swiper slider">
+            <div className={`swiper ${cls.slider}`}>
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide slide">
-                        <div className="slide__content">
+                    <div className={`swiper-slide ${cls.slide}`}>
+                        <div className={cls.slide__content}>
                             <h2>Abstract</h2>
                             <p>Designing for the future</p>
                             <button>Join Us</button>
                         </div>
                     </div>
-                    <div className="swiper-slide slide">
-                        <div className="slide__content">
+                    <div className={`swiper-slide ${cls.slide}`}>
+                        <div className={cls.slide__content}>
                             <h2>Design</h2>
                             <p>Designing for the future</p>
                             <button>Join Us</button>
                         </div>
                     </div>
-                    <div className="swiper-slide slide">
-                        <div className="slide__content">
+                    <div className={`swiper-slide ${cls.slide}`}>
+                        <div className={cls.slide__content}>
                             <h2>Future</h2>
                             <p>Designing for the future</p>
                             <button>Join Us</button>
                         </div>
                     </div>
-                    <div className="swiper-slide slide">
-                        <div className="slide__content">
+                    <div className={`swiper-slide ${cls.slide}`}>
+                        <div className={cls.slide__content}>
                             <h2>Forever</h2>
                             <p>Designing for the future</p>
                             <button>Join Us</button>
@@ -118,7 +118,7 @@ export const Horizontal = () => {
                     <div className="slider-pagination">
                         <div className="swiper-pagination" />
                     </div>
-                    <div className="slider-navigation">
+                    <div className={cls['slider-navigation']}>
                         <div className="swiper-button-prev" />
                         <div className="swiper-button-next" />
                     </div>
@@ -127,7 +127,7 @@ export const Horizontal = () => {
 
             <video
                 src={videoSrc}
-                className="video-background"
+                className={cls['video-background']}
                 muted
                 ref={video}
             ></video>
