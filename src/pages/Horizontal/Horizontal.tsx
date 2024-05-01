@@ -1,18 +1,15 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-/* import Swiper from 'swiper'; */
 import logoSrc from 'pages/Horizontal/img/logo.svg';
 // @ts-expect-error TODO
 import videoSrc from 'pages/Horizontal/media/background.mp4';
-import './Horizontal.css';
+import './Horizontal.scss';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
-
-/* import { Swiper } from 'shared/lib/swiper/swiper-bundle.min.js'; */
 
 export const Horizontal = () => {
     const video = useRef<HTMLVideoElement>(null);
@@ -32,11 +29,6 @@ export const Horizontal = () => {
                     nextEl: '.swiper-button-next',
                 },
                 modules: [Navigation, Pagination, Mousewheel],
-                /*          on: {
-                slideChange: function () {
-                    console.log('eee');
-                },
-            }, */
             },
             [],
         );
@@ -44,7 +36,6 @@ export const Horizontal = () => {
         console.log('sw ' + swiper.mousewheel.enabled);
 
         swiper.on('slideChange', function () {
-            console.log('333');
             if (video.current) {
                 gsap.to(video.current, 1.6, {
                     currentTime:
@@ -56,11 +47,9 @@ export const Horizontal = () => {
         });
         swiper
             .on('slideChangeTransitionStart', function () {
-                console.log('444 ' + video.current);
                 video.current?.classList.add('change');
             })
             .on('slideChangeTransitionEnd', function () {
-                console.log('555');
                 video.current?.classList.remove('change');
             });
     }, []);
@@ -127,11 +116,11 @@ export const Horizontal = () => {
 
                 <div className="slider-bottom">
                     <div className="slider-pagination">
-                        <div className="swiper-pagination"></div>
+                        <div className="swiper-pagination" />
                     </div>
                     <div className="slider-navigation">
-                        <div className="swiper-button-prev"></div>
-                        <div className="swiper-button-next"></div>
+                        <div className="swiper-button-prev" />
+                        <div className="swiper-button-next" />
                     </div>
                 </div>
             </div>
