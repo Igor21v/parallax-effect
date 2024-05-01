@@ -18,39 +18,49 @@ export const Horizontal = () => {
     const video = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        const swiper = new Swiper('.swiper', {
-            speed: 1600,
-            mousewheel: {},
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        const swiper = new Swiper(
+            '.swiper',
+            {
+                speed: 1600,
+                mousewheel: {},
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next',
+                },
+                modules: [Navigation, Pagination, Mousewheel],
+                /*          on: {
+                slideChange: function () {
+                    console.log('eee');
+                },
+            }, */
             },
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next',
-            },
-            modules: [Navigation, Pagination, Mousewheel],
-        });
+            [],
+        );
 
         console.log('sw ' + swiper.mousewheel.enabled);
 
         swiper.on('slideChange', function () {
+            console.log('333');
             if (video.current) {
                 gsap.to(video.current, 1.6, {
                     currentTime:
-                        // @ts-expect-error TODO
-                        (video.current.duration / (this.slides.length - 1)) *
-                        // @ts-expect-error TODO
-                        this.realIndex,
-                    ease: Power2.easeOut,
+                        (video.current.duration / (swiper.slides.length - 1)) *
+                        swiper.realIndex,
+                    ease: 'power2.easeOut',
                 });
             }
         });
         swiper
             .on('slideChangeTransitionStart', function () {
+                console.log('444 ' + video.current);
                 video.current?.classList.add('change');
             })
             .on('slideChangeTransitionEnd', function () {
+                console.log('555');
                 video.current?.classList.remove('change');
             });
     }, []);
@@ -126,7 +136,12 @@ export const Horizontal = () => {
                 </div>
             </div>
 
-            <video src={videoSrc} className="video-background" muted></video>
+            <video
+                src={videoSrc}
+                className="video-background"
+                muted
+                ref={video}
+            ></video>
         </>
     );
 };

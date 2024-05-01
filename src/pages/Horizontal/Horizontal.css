@@ -5,6 +5,10 @@
 }
 :root {
     --index: calc(1vw + 1vh);
+}
+body {
+    background-color: #000;
+    color: #fff;
     --swiper-theme-color: #4b4d53;
     --swiper-navigation-size: 30px;
     --swiper-navigation-sides-offset: 40px;
@@ -12,11 +16,7 @@
     --swiper-pagination-color: #afb3c0;
     --swiper-pagination-bullet-inactive-color: #36373c;
     --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-navigation-color: #afb3c0;
-}
-body {
-    background-color: #000;
-    color: #fff;
+    --swiper-navigation-color: #4b4d53;
 }
 .slider {
     height: 100vh;
@@ -70,9 +70,13 @@ button {
     letter-spacing: 0.2rem;
     cursor: pointer;
 }
-.slider-navigation > * {
+.slider-navigation > *::before {
     border: 1.5px solid var(--swiper-theme-color);
     border-radius: 10em;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    content: '';
 }
 .video-background {
     position: fixed;
