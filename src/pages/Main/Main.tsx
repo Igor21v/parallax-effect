@@ -36,7 +36,7 @@ export const Main = () => {
                             </div>
                             <Link to="/vert">
                                 <button className={cls.button_start}>
-                                    Start Learning
+                                    Show next parallax
                                 </button>
                             </Link>
                         </div>

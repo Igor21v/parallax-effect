@@ -90,7 +90,7 @@ export const Horizontal = () => {
                             <h2>Abstract</h2>
                             <p>Designing for the future</p>
                             <Link to="/">
-                                <button>Join Us</button>
+                                <button>Show next</button>
                             </Link>
                         </div>
                     </div>
@@ -98,21 +98,27 @@ export const Horizontal = () => {
                         <div className={cls.slide__content}>
                             <h2>Design</h2>
                             <p>Designing for the future</p>
-                            <button>Join Us</button>
+                            <Link to="/">
+                                <button>Show next</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={`swiper-slide ${cls.slide}`}>
                         <div className={cls.slide__content}>
                             <h2>Future</h2>
                             <p>Designing for the future</p>
-                            <button>Join Us</button>
+                            <Link to="/">
+                                <button>Show next</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={`swiper-slide ${cls.slide}`}>
                         <div className={cls.slide__content}>
                             <h2>Forever</h2>
                             <p>Designing for the future</p>
-                            <button>Join Us</button>
+                            <Link to="/">
+                                <button>Show next</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

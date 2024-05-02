@@ -52,7 +52,7 @@ export const Button = memo((props: ButtonProps) => {
         fullWidth,
         ...otherProps
     } = props;
-    const additional = [className, cls[theme], cls[size]];
+    const additional = [cls[theme], cls[size], className];
     const mods: Mods = {
         [cls.square]: square,
         [cls.disabled]: disabled,
