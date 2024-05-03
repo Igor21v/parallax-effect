@@ -12,12 +12,12 @@
 
 ## Parallax Natural Forest
 
-![Alt Text](https://webitem.ru/static/parallax/Parallax%20NATURAL%20FOREST.gif)
+![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20NATURAL%20FOREST.gif](https://webitem.ru/static/parallax/Parallax%20NATURAL%20FOREST.gif2)
 
 ## Parallax Fairy Forest
 
-![Alt Text](https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif)
+![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif](https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif)
 
 ## Parallax Video Animation
 
-![Alt Text](https://webitem.ru/static/parallax/Parallax%20video%20animation.gif)
+![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20video%20animation.gif](https://webitem.ru/static/parallax/Parallax%20video%20animation.gif)
