@@ -16,7 +16,7 @@
 
 ## Parallax Fairy Forest
 
-![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif](https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif)
+![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20FAIRY%20FOREST.gif](https://github.com/Igor21v/parallax-effect/blob/main/Parallax%20FAIRY%20FOREST.gif)
 
 ## Parallax Video Animation
 
