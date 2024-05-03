@@ -12,7 +12,7 @@
 
 ## Parallax Natural Forest
 
-![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20NATURAL%20FOREST.gif](https://github.com/Igor21v/parallax-effect/blob/main/docs/Parallax%20FAIRY%20FOREST.gif)
+![Пример анимации по ссылке https://webitem.ru/static/parallax/Parallax%20NATURAL%20FOREST.gif](https://github.com/Igor21v/parallax-effect/blob/main/docs/Parallax%20NATURAL%20FOREST.gif)
 
 ## Parallax Fairy Forest
 
